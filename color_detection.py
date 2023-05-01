@@ -1,3 +1,5 @@
+#color_detection by sanjanamaankar17
+
 import cv2
 import numpy as np
 import pandas as pd
@@ -50,13 +52,13 @@ while(1):
     cv2.imshow("image",img)
     if (clicked):
    
-        #cv2.rectangle(image, startpoint, endpoint, color, thickness)-1 fills entire rectangle 
+        
         cv2.rectangle(img,(20,20), (750,60), (b,g,r), -1)
 
         #Creating text string to display( Color name and RGB values )
         text = getColorName(r,g,b) + ' R='+ str(r) +  ' G='+ str(g) +  ' B='+ str(b)
         
-        #cv2.putText(img,text,start,font(0-7),fontScale,color,thickness,lineType )
+        
         cv2.putText(img, text,(50,50),2,0.8,(255,255,255),2,cv2.LINE_AA)
 
         #For very light colours we will display text in black colour
